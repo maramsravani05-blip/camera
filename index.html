@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Camera Studio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <h1>Camera Studio</h1>
+      <button id="switchBtn" class="icon-btn" title="Switch front/back camera" aria-label="Switch camera">⟲</button>
+    </header>
+
+    <section class="viewfinder">
+      <video id="video" autoplay playsinline muted></video>
+      <div id="message" class="message" hidden></div>
+      <div id="flash" class="flash"></div>
+      <span id="cameraLabel" class="badge">Starting…</span>
+    </section>
+
+    <section class="filters" id="filters" aria-label="Filters"></section>
+
+    <section class="controls">
+      <button id="startBtn" class="pill" hidden>Enable camera</button>
+      <button id="captureBtn" class="shutter" title="Take photo" aria-label="Take photo"></button>
+    </section>
+
+    <section class="gallery-wrap">
+      <h2>Photos</h2>
+      <div id="gallery" class="gallery"></div>
+    </section>
+  </main>
+
+  <canvas id="canvas" hidden></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
